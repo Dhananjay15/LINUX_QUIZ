@@ -1,0 +1,141 @@
+/* Add the necessary CSS styles to create effects and animations for the quiz container */
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #202020;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  animation: fade-in 0.5s ease-out;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  text-align: center;
+  color: #00eaff;
+  margin-bottom: 20px;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+#question-number {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#result {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: fade-in 0.5s ease-out;
+}
+
+#question {
+  margin-bottom: 20px;
+}
+
+#options-list {
+  list-style-type: none;
+  padding: 0;
+  animation: fade-in 0.5s ease-out;
+}
+
+.option {
+  margin-bottom: 10px;
+  animation: fade-in 0.5s ease-out;
+}
+
+.option button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #2e2e2e;
+  border: 1px solid #00eaff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option button:hover {
+  background-color: #1e1e1e;
+  transform: rotate(5deg);
+  box-shadow: 0 2px 4px rgba(0, 234, 255, 0.2);
+}
+
+.option button.selected {
+  background-color: #00eaff;
+  color: #0e0e0e;
+}
+
+#submit-button,
+#start-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #00eaff;
+  color: #0e0e0e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: fade-in 0.5s ease-out;
+}
+
+#submit-button:hover,
+#start-button:hover {
+  background-color: #1c9ed9;
+  transform: scale(1.1);
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  #question-number {
+    font-size: 18px;
+  }
+
+  #question {
+    font-size: 16px;
+  }
+
+  .option button {
+    font-size: 14px;
+  }
+
+  #submit-button,
+  #start-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
